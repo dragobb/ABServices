@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABServices - Resume, Websites, Computer Solutions</title>
+    <link rel="icon" href="AB.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="AB.png" alt="AB Logo">
+            <h1>ABServices</h1>
+        </div>
+        
+        <div class="search-bar">
+            <form action="https://www.google.com/search" method="GET">
+                <input type="text" name="q" placeholder="Search Google...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+    </header>
+
+    <!-- Contact Form Overlay -->
+    <div id="contactOverlay" class="overlay">
+        <div class="overlay-content">
+            <button id="closeBtn" class="close-btn">&times;</button>
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="contactNumber">Contact Number</label>
+                <input type="tel" id="contactNumber" name="contactNumber" required>
+    
+                <label for="inquiry">Inquiry</label>
+                <textarea id="inquiry" name="inquiry" rows="4" required></textarea>
+    
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Social Media Links -->
+            
+        </div>
+    </div>
+
+    <section class="hero">
+        <img src="Cover.png" alt="Banner Image" class="hero-banner">
+        <h2>Delivering Excellence in Resume Crafting, Website Design, & Computer Servicing</h2>
+        <p>Let us elevate your professional and technical needs.</p>
+    </section>
+    
+    <!-- Services Cards -->
+    <section class="services">
+        <div class="service">
+            <h3>Resume Making</h3>
+            <p>Stand out with a professionally crafted resume tailored to your goals.</p>
+        </div>
+        <div class="service">
+            <h3>Website Design</h3>
+            <p>Custom websites that showcase your brand and deliver results.</p>
+        </div>
+        <div class="service">
+            <h3>Computer Servicing</h3>
+            <p>Reliable solutions for all your computer repair and maintenance needs.</p>
+        </div>
+    </section>
+
+    <!-- Scroll-triggered sections -->
+    <section class="scroll-section">
+        <div class="text-content">
+            <h2>Resume Making</h2>
+            <p>Resume-making service helps you highlights your skills and experience, ensuring you stand out to employers.</p>
+        </div>
+        <img src="Resume Making.png" alt="Resume Making">
+    </section>
+
+    <section class="scroll-section">
+        <img src="Website Design.png" alt="Website Design">
+        <div class="text-content">
+            <h2>Website Design</h2>
+            <p>Create modern, user-friendly websites that boost your online presence and drive more engagement to your business or personal brand.<br> Written in HTML, JavaScript, PHP for basic Student Website Portfolio suited for School Projects.</p>
+        </div>
+    </section>
+
+    <section class="scroll-section">
+        <div class="text-content">
+            <h2>Computer Servicing</h2>
+            <p>Provides fast and reliable computer repair and maintenance services, ensuring your devices run smoothly.</p>
+        </div>
+        <img src="Reformat System Services.png" alt="Computer Servicing">
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio">
+        <div class="portfolio-content">
+            <img src="ariel_prof.jpg" alt="Ariel Bonifacio">
+            <div class="portfolio-details">
+                <h2>Ariel Bonifacio</h2>
+                <p>📞 Contact: +63 968 239 8795</p>
+                <p>📧 Email: arielboni74@gmail.com</p>
+                <h3>Projects:</h3>
+                <ul class="projects-list">
+                    <li class="project-item">✅ Project 1 - Student Portfolio Website</li>
+                    <li class="project-item">✅ Project 2 - ABServices Sample Site</li>
+                    <li class="project-item">✅ Project 3 - Modern Calculator @Java w/ UI</li>
+                    <li class="project-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12c0 4.72 3.44 8.68 7.94 9.73v-6.8h-2.4v-2.93h2.4v-2.2c0-2.4 1.36-3.7 3.57-3.7.94 0 1.91.17 2.01.19v2.24h-1.2c-1.18 0-1.46.57-1.46 1.43v1.87h2.91l-.47 2.93h-2.44v6.8c4.5-1.05 7.94-5.01 7.94-9.73 0-5.52-4.48-10-10-10z"/>
+                        </svg>                        
+                        <a href="https://www.facebook.com/profile.php?id=61571072648497" target="_blank">  
+                            Contact us on Social Media
+                        </a>
+                    </li>
+                    
+                </ul>
+                <div class="header-buttons">
+                    <button id="contactBtn">Contact Us</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 ABServices. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
