@@ -1,4 +1,4 @@
-// Existing function to reveal sections on scroll
+// Function to reveal sections on scroll
 function revealSections() {
     const sections = document.querySelectorAll('.scroll-section');
     const windowHeight = window.innerHeight;
@@ -13,25 +13,39 @@ function revealSections() {
 window.addEventListener('scroll', revealSections);
 window.addEventListener('load', revealSections);
 
-// Get the elements for the contact button, overlay, and close button
+// Get the elements for the contact button, overlay, close button, and form
 const contactBtn = document.getElementById('contactBtn');
 const overlay = document.getElementById('contactOverlay');
 const closeBtn = document.getElementById('closeBtn');
+const contactForm = document.querySelector("#contactOverlay form");
 
 // Show the overlay when the "Contact Us" button is clicked
 contactBtn.addEventListener('click', () => {
-    overlay.style.display = 'flex'; // Show the overlay (set display to flex)
+    overlay.style.display = 'flex'; // Show the overlay
 });
 
 // Close the overlay when the close button is clicked
 closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none'; // Hide the overlay (set display to none)
+    overlay.style.display = 'none'; // Hide the overlay
 });
 
-// Optional: Close the overlay if the user clicks anywhere outside the form
+// Close the overlay when clicking outside the form
 overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) { // Check if the click was on the overlay, not the form itself
-        overlay.style.display = 'none'; // Close the overlay
+    if (event.target === overlay) {
+        overlay.style.display = 'none';
     }
 });
 
+// Handle form submission
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission (for testing)
+
+    // (Optional) Show a success message
+    alert("Your inquiry has been submitted! You will receive a response soon.");
+
+    // Close the overlay after submission
+    overlay.style.display = "none";
+
+    // (Optional) Reset the form fields
+    contactForm.reset();
+});

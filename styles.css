@@ -152,6 +152,49 @@ header {
 .scroll-section p {
     font-size: 1.1rem;
 }
+/* Home Services */
+.home-services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.home-services .text-content {
+    max-width: 500px;
+}
+
+.home-services h2 {
+    font-size: 2rem;
+    color: #854a8d;
+}
+
+.home-services p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.home-services .map-content iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-services {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-services .map-content iframe {
+        width: 90%;
+        height: 250px;
+    }
+}
+
 
 /* Portfolio Section */
 .portfolio {
@@ -227,147 +270,3 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Overlay Style */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-    display: none; /* Initially hidden */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top of other content */
-}
-
-/* Contact Form Style */
-.contact-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-.contact-form h2 {
-    margin-bottom: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.contact-form button {
-    background-color: #272f70;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #854a8d;
-}
-
-/* Close Button Style */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #272f70;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #854a8d;
-}
-
-.close-btn:hover {
-    color: black;
-}
-
-.overlay form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.overlay form input,
-.overlay form textarea {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.overlay form button {
-    padding: 10px 20px;
-    background-color: #272f70;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.overlay form button:hover {
-    background-color: #6e3f72;
-}
-
-.social-media {
-    margin-top: 20px;
-}
-
-.social-logo {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-}
-
-@media (max-width: 768px) {
-    .scroll-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .scroll-section img {
-        width: 90%;
-    }
-}
-#contactBtn {
-    background-color: #272f70; /* Deep blue color */
-    color: white; /* White text */
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#contactBtn:hover {
-    background-color: #854a8d; /* Lighter purple on hover */
-    transform: translateY(-5px); /* Slight hover effect */
-}
-
-#contactBtn:active {
-    background-color: #6b3e75; /* Darker purple on click */
-    transform: translateY(2px); /* Button presses down when clicked */
-}
-
-#contactBtn:focus {
-    outline: none; /* Remove outline when focused */
-    box-shadow: 0 0 0 3px rgba(133, 74, 141, 0.5); /* Add focus ring */
-}
